@@ -1,0 +1,26 @@
+<template>
+  <div>
+    <px-assets-table :assets="assets" />
+    <!-- v-bind: es perfectamente reemplazable
+    por los : -->
+  </div>
+</template>
+
+<script>
+import PxAssetsTable from '@/components/PxAssetsTable'
+import api from '@/api'
+export default {
+  name: 'Home',
+  components: { PxAssetsTable },
+
+  data() {
+    return {
+      assets: []
+    }
+  },
+
+  created() {
+    api.getAssets().then(assets => (this.assets = assets))
+  }
+}
+</script>
