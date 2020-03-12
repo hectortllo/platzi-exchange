@@ -7,9 +7,7 @@
       <br />Este proyecto es utilizado en el curo de Vue.js Basico de Platzi
     </p>
 
-    <router-link 
-      to="/" 
-      class="mt-5 text-xl text-green-600 hover:underline">
+    <router-link to="/" class="mt-5 text-xl text-green-600 hover:underline">
       Volver a la página principal
     </router-link>
   </div>
