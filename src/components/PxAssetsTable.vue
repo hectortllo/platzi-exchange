@@ -33,14 +33,16 @@
           <b># {{ a.rank }} </b>
         </td>
         <td>
-          <router-link 
-          class="hover:underline text-green-600"
-          :to="{ name: 'coin-detail', params: { id: a.id} }">
-          {{ a.name }}</router-link >
+          <router-link
+            class="hover:underline text-green-600"
+            :to="{ name: 'coin-detail', params: { id: a.id } }"
+          >
+            {{ a.name }}</router-link
+          >
           <small>
             {{ a.symbol }}
           </small>
-          </td>
+        </td>
         <td>{{ a.priceUsd | dollar }}</td>
         <td>{{ a.marketCapUsd | dollar }}</td>
         <td
@@ -77,7 +79,7 @@ export default {
   },
 
   methods: {
-    goToCoin(id){
+    goToCoin(id) {
       this.$router.push({ name: 'coin-detail', params: { id } })
     }
   }
